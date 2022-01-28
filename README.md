@@ -11,5 +11,5 @@ This folder contains the following:
 
 Each of these templates contain generic starting code that was taught in class, as well can be found in the Lecture Slides: **Setting up &amp; Starting Your First WordPress Website** on Moodle. 
 
-**Note**: the @package and @since have been left with filler content, you will need to fill in those details. The same goes for the pathing for enqueuing your additional styles and scripts.
+
 
