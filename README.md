@@ -26,6 +26,11 @@ The files used in the initial are:
 - header.php
 - footer.php
 
+---
+
+##### Week 4 | Day 6 & 7
+### WP Page Templates
+
 
 
 
