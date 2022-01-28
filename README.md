@@ -1,4 +1,4 @@
-# WordPress - Starting Files
+# WordPress - Demos
 
 This file contains the basic templates to get you started building your WordPress site. 
 
