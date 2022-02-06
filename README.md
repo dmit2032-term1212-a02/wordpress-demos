@@ -1,8 +1,10 @@
 # WordPress - Demos
 
 Each week or class we will focus on different facet of WordPress build (template (pages, post, artchive, plugins, etc...).
-
 This readme file will act as log (weekly or by-class) and will contain notes with code examples. 
+
+Demo URL: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/
+
 
 **note:** 
 - Most content in this files is basic building blocks to help you get you started, nothing crazy! 
@@ -30,9 +32,11 @@ The files used in the initial are:
 
 ##### Week 4 | Day 6 & 7
 ### WP Page Templates
-
+Site URLS: 
+homepage: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/
+About: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/about/
 Examples: 
-homepage;
+homepage; 
  - responsive banner using a background image. 
     -- for background images all images need to come from the media library. 
     -- background images are added by url (see style.css)
@@ -42,7 +46,7 @@ Interior page:
 
 ##### Week 5 | Day 8 & 9
 ### WP Post Templates
-
+Site URL: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/blog/
 Examples:
 home.php
 - responsive blog excerpt layout. 
