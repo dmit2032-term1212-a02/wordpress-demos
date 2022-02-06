@@ -14,7 +14,7 @@ This readme file will act as log (weekly or by-class) and will contain notes wit
 
 
 ##### Week 3 | Day 5 & 6
-### WP Initial Setup
+### WP Initial Setup & WP Basic Loop
 
 Step-by-step guide on how to create your first WP site can be found on Moodle, in the the lecture slides: **Setting up &amp; Starting Your First WordPress Website**
 
@@ -31,7 +31,22 @@ The files used in the initial are:
 ##### Week 4 | Day 6 & 7
 ### WP Page Templates
 
+Examples: 
+homepage;
+ - responsive banner using a background image. 
+    -- for background images all images need to come from the media library. 
+    -- background images are added by url (see style.css)
 
+Interior page: 
+    - shows how to add in structural html around the loop. 
 
+##### Week 5 | Day 8 & 9
+### WP Post Templates
+
+Examples:
+home.php
+- responsive blog excerpt layout. 
+single.php
+ - shows how to add in structural html around the loop and within the content template (content-single.php).
 
 
