@@ -1,0 +1,219 @@
+/*
+Theme Name: WP Demos A02
+Theme URI: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/
+Author: Lauren
+Description: DMIT2032 WP Demo site
+Version: 1.0
+License: GNU General Public License v2 or Later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wpdemos
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #e1e1e1;
+    font-size: 1.8rem;
+    font-family: 'Bitter', serif;
+}
+
+img {
+    height: auto; /** helps stop your images from stretching **/
+}
+
+/** TYPOGRAPHY **/
+h1 {
+    font-family: 'Cabin', sans-serif;
+    font-size:4.8rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+    color: #e1e1e1;
+}
+
+p {
+    margin-bottom: 2.4rem;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 2.1rem;
+    line-height: 1;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+/** structural layout **/
+.container-full { width: 100%; }
+
+.container {
+    padding: 0 2%;
+}
+
+/** HOMEPAGE **/
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1)),
+    url('http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/wp-content/uploads/2022/01/plants.webp');
+    background-size: cover;
+    padding: 8.1rem 1rem;
+    text-align: center;;
+}
+
+.hero-banner p {
+    color: #e1e1e1;
+}
+
+.hero-banner a {
+    padding: 1.5rem;
+    background: lightgoldenrodyellow;
+    line-height: 1;
+    margin-top: 4.8rem;
+    display: inline-block;
+    color: mediumpurple;
+}
+
+.hero-banner a:hover {
+    color: lightgoldenrodyellow;
+    background: indigo;
+}
+
+/** page.php - About **/
+.page-heading {
+    padding: 1rem;
+}
+
+
+/** home.php - blog page layout **/
+
+
+/** blog banner for home.php and single.php **/
+.banner {
+    padding: 4.8rem 0;
+    text-align: center;
+    background-color: darkcyan;
+    color: lightgray;
+}
+
+.blog-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin: 4.8rem auto;
+}
+
+.blog-card {
+    display: flex;
+    align-items: flex-start; /** removes the default flex-strectch **/
+    flex-direction: column;
+    flex: 0 0 100%;
+    border: 1px solid grey;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.blog-card img { margin-bottom: 2.4rem; }
+
+.blog-card a { color: indigo; }
+.blog-card a:hover { color: mediumpurple; }
+
+.blog-card h4 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+.post-categories { display: flex; 
+}
+.post-categories li { 
+    /** add flex here to have to the "|" (pipe characters) sit between each category link **/
+    display: flex;
+    padding-left: 0.5rem;
+}
+.post-categories li:first-child { padding-left: 0;}
+/** ::after or ::before allows you to add in "fake" html through CSS - this is a more advanced method - a good use of these is for headings with under or overlines or even pipe characters used between categories as seen below 
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements or https://developer.mozilla.org/en-US/docs/Web/CSS/::after **/
+
+.post-categories li::after {
+    content: ''; /** need this to be able to see the ::after/::before added in **/
+    /** style the remaining as needed **/
+    border-right: 0.2rem solid #1e1e1e;
+    padding-right: 0.5rem;
+}
+
+/** remove the last pipe character **/
+.post-categories li:last-of-type::after { content: none; }
+
+.blog-card-footer p { margin-bottom: 0; }
+
+
+/** single.php - full articles **/
+
+.meta-info { display: flex; }
+
+/** another method of adding in pipe characters **/
+.meta-info li {
+    border-right: 1px solid;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;;
+}
+.meta-info li:first-child {
+    padding-left: 0;
+}
+
+.meta-info li:last-of-type {
+    border-right: none;
+}
+
+@media screen and (min-width: 600px) {
+    /** typography **/
+    h1 {
+        font-size: calc(4.8rem + 2vw);
+    }
+
+
+    /** home.php - blog page layout **/
+    .blog-card {
+        flex-direction: row;
+    }
+
+    .blog-card img {
+        width: 30%;
+        flex: 1 1 30%;
+        margin-right: 5%;
+    }
+
+    .blog-card-body {
+        width: 65%;
+        flex: 1 1 65%;
+    }
+
+
+}
+
+
+@media screen and (min-width: 991px) {
+
+    /** home.php - blog page layout **/
+    .blog-card {
+        flex: 0 0 48%;
+    } 
+}
+
+@media screen and (min-width: 1560px) {
+
+    /** home.php - blog page layout **/
+    .blog-card {
+        flex: 0 0 49%;
+    } 
+}
+
+@media screen and (min-width: 1600px) {
+    .container {
+        padding: 0;
+        max-width: 160rem; /**1600px**/
+        margin: auto;
+    }
+}
