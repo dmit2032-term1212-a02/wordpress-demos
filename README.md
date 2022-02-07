@@ -44,9 +44,12 @@ homepage;
 Interior page: 
     - shows how to add in structural html around the loop. 
 
+---
+
 ##### Week 5 | Day 8 & 9
 ### WP Post Templates
 Site URL: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/blog/
+
 Examples:
 home.php
 - responsive blog excerpt layout. 
