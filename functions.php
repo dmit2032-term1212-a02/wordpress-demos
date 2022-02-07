@@ -5,11 +5,12 @@
  * @since 1.0.0
  * 
  */
-function gg_gfonts_prefetch() {
-   echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
-   echo '<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>';
-  }
-add_action( 'wp_head', 'gg_gfonts_prefetch' );
+   function gg_gfonts_prefetch() {
+      echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
+      echo '<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>';
+   }
+
+   add_action( 'wp_head', 'gg_gfonts_prefetch' );
 
  //styles & scripts function
  function wpdemos_a02_styles() {
