@@ -60,7 +60,7 @@ a {
     url('http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a02/wp-content/uploads/2022/01/plants.webp');
     background-size: cover;
     padding: 8.1rem 1rem;
-    text-align: center;;
+    text-align: center;
 }
 
 .hero-banner p {
@@ -88,7 +88,6 @@ a {
 
 
 /** home.php - blog page layout **/
-
 
 /** blog banner for home.php and single.php **/
 .banner {
