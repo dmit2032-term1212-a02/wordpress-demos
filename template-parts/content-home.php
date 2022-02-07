@@ -12,7 +12,6 @@
     <div class="content">
         <!-- display the page or post content -->
         <?php the_content(); ?>
-       
     </div>
 
 </article>
