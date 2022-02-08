@@ -54,6 +54,14 @@ a {
     padding: 0 2%;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.4rem;
+}
+
 /** HOMEPAGE **/
 .hero-banner {
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1)),
@@ -166,6 +174,30 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements or https://deve
     border-right: none;
 }
 
+/** archives **/
+
+/** removing default <li> from pages and category lists **/
+
+/** archive column layout **/
+.col {
+    width: 100%;
+}
+
+ul.page-list{}
+
+ul.page-list li:first-child{}
+
+ul.page-list li > ul,
+ul.cat-list li > ul,
+.widget_archive ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.remove-default-widget-heading .widget_archive h2 {
+    display: none;
+}
+
 @media screen and (min-width: 600px) {
     /** typography **/
     h1 {
@@ -189,6 +221,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements or https://deve
         flex: 1 1 65%;
     }
 
+    /** archives column layout **/
+    .col { width: 48%; }
+
 
 }
 
@@ -198,7 +233,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements or https://deve
     /** home.php - blog page layout **/
     .blog-card {
         flex: 0 0 48%;
-    } 
+    }
+    
+    /** archives column layout **/
+    .col { width: 20%; }
 }
 
 @media screen and (min-width: 1560px) {
