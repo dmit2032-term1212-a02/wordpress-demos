@@ -62,6 +62,8 @@ single.php
 ### WP Archive Templates
 Site URL: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a01/2022/01/
 
+- *notes added on how to remove the the category and page list item heading within the archive template.*
+
 Examples:
 archive.php
  - responsive layout of archive template with recent posts (blogs), pages, categories and monthly archives.
