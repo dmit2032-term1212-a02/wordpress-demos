@@ -47,7 +47,7 @@
                         <?php wp_list_categories('depth=1'); ?>
                     </ul>
                 </div>
-                <div class="col col-4">
+                <div class="col col-4 remove-default-widget-heading">
                     <!-- monthly archives -->
                     <h2><?php _e('Monthly Archives');?></h2>
                     <!-- displays your monthly archives as list -->
