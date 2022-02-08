@@ -35,7 +35,7 @@
                     <h2><?php _e('Pages');?></h2>
                     <!-- displays a list of pages -->
                     <ul class="page-list">
-                        <?php wp_list_pages(); ?>
+                        <?php wp_list_pages('title_li='); ?>
                     </ul>
                 </div>
                 <div class="col col-3">
@@ -44,7 +44,19 @@
                     
                     <!-- display a list of categories -->
                     <ul class="cat-list">
-                        <?php wp_list_categories('depth=1'); ?>
+                         <!-- 
+                        to remove or hide the the default list heading add: 'title_li' to be set to null or empty. This can be done in a couple of different ways:
+                            1. if you only have the one parameter then you don't need to add an array for a list of arguements:
+                                <?php //wp_list_categories( 'title_li=' ); ?>
+                            2. If you have a list of parameters than create an array with a list of parameters to be passed. See below.
+                        -->
+                        <?php wp_list_categories( 
+                            array(
+                               'depth' => 1, 
+                               'title_li' => '', 
+                            ),
+                            
+                        ); ?>
                     </ul>
                 </div>
                 <div class="col col-4 remove-default-widget-heading">
