@@ -56,4 +56,14 @@ home.php
 single.php
  - shows how to add in structural html around the loop and within the content template (content-single.php).
 
+---
+
+##### Week 6 | Day 10 & 11
+### WP Archive Templates
+Site URL: http://laureno.dmitstudent.ca/dmit2032/term1212/demos-a01/2022/01/
+
+Examples:
+archive.php
+ - responsive layout of archive template with recent posts (blogs), pages, categories and monthly archives.
+category.php
 
