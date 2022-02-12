@@ -27,7 +27,8 @@ get_header(); ?>
             <?php endif?>
             
         </section>
-        <div class="container">
+        <div class="container two-thirds-layout">
+            <div class="main-content two-thirds-col">  
         <?php while( have_posts() ) : the_post(); ?>
         <!-- cycles through all content and displays all until nothing else is left to be displayed -->
                 <div class="category-post">
@@ -39,9 +40,16 @@ get_header(); ?>
                     </h4>
                     <?php echo get_the_date(); ?>
                     <?php the_category(); ?>
+                    <?php the_excerpt(); ?>
                 </div>
         <?php endwhile; ?>
+            </div>
+            <div class="sidebar-content one-thrid-col">
+                <!-- placeholder content -->
+                <p>Placeholder content - coming soon!</p>
+            </div>
         </div>
+        
         <?php else: ?>
             <?php get_template_part('template-parts/content', 'none'); ?>
     <?php endif;?>
