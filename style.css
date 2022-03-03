@@ -86,6 +86,26 @@ a {
     gap: 2.4rem;
 }
 
+.sr-only {
+    position: absolute;
+    top: 0;
+    left: -9999999px;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+/** header **/
+/** logo **/
+.logo{
+    display: none;
+}
+
+.sm-screens > a {
+    width: 10rem;
+}
+
+
+
 /** HOMEPAGE **/
 .hero-banner {
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1)),
@@ -251,6 +271,15 @@ ul.cat-list li > ul,
 
 }
 
+
+@media screen and (min-width: 800px) {
+    .sm-screens {
+        display: none;
+    }
+    .logo {
+        display: block;
+    }
+}
 
 @media screen and (min-width: 991px) {
 
