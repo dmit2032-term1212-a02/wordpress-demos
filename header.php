@@ -16,7 +16,7 @@
     </head>
     <body <?php body_class(); ?> >
         <header>
-            <div class="container">
+            <div class="container flex-container">
                 <div class="logo">
                     <!-- option 2 -->
                     <?php if ( ! has_custom_logo() ) { ?>
@@ -31,19 +31,38 @@
                         <?php } else {
                             the_custom_logo();
                         }?>
+                </div>
+
+                <!-- not the best method: device based mobile logo styling: wp_is_mobile() -->
+                <div class="sm-screens mobile">
+                    <a class="mobile-logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/img/mobile-logo.svg" alt="<?php the_title(); ?>"/>
+                        <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
+                    </a>
+                    
+                    <!-- toggle icon -->
+                    <div class="toggle-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
 
-                    <!-- not the best method: device based mobile logo styling: wp_is_mobile() -->
-                    <div class="sm-screens mobile">
-                        <a class="mobile-logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
-                            <img src="<?php bloginfo('template_directory'); ?>/assets/img/mobile-logo.svg" alt="<?php the_title(); ?>"/>
-                            <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
-                        </a>
-                    </div>
+                </div>
+                 <!-- navigation -->
+                <nav>
+                    <?php
+                        wp_nav_menu (
+                            //array of arguments
+                            array(
+                            'theme_location' =>  'main-menu', //most important
+                            'menu_class'     =>  'main-menu',
+                            'menu_id'        =>  'main-menu',
+                            'fallback_cb'    =>  '' //if menu doesn't exist, a callback function will fire
+                            )
+                        );
+                    ?>
+                </nav>
             </div>
             <!-- //container -->
-
-
-
         </header>
 
