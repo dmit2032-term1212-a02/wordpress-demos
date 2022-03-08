@@ -23,6 +23,9 @@
    //required stylesheet
     wp_enqueue_style('style', get_stylesheet_uri() );
 
+    //scripts
+    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '3.6.0', true );
+
  }
  add_action('wp_enqueue_scripts', 'wpdemos_a02_styles');
 
@@ -78,3 +81,13 @@
 
   }
   add_action('after_setup_theme','theme_setup');
+
+//REGISTERING MENUS
+function register_menus() {
+   register_nav_menus(
+      array(
+         'main-menu' => 'Main Menu',
+      )
+   );
+}
+add_action('init', 'register_menus');
