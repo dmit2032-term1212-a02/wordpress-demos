@@ -100,10 +100,72 @@ a {
     display: none;
 }
 
+/** small screen - mobile layout **/
+.sm-screens {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .sm-screens > a {
     width: 10rem;
 }
 
+/** toggle icon **/
+.toggle-icon span {
+    width: 5rem;
+    height: 0.5rem;
+    display: block;
+    background: #e1e1e1;
+    margin-bottom: 0.6rem;
+    border-radius: 10rem;
+}
+
+/** menu styling **/
+header {
+    position: relative;
+    background-color: #111;
+}
+
+/** positioning the menu for off-screen use **/
+header nav {
+    background-color: #111;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    /** hide menu **/
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.7s ease-in-out;
+}
+
+/** show the menu **/
+.show nav {
+    max-height: 20rem;
+}
+
+ul.main-menu {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #111;
+}
+
+
+ul.main-menu a {
+    color: #e1e1e1;
+    line-height: 2;
+}
+
+ul.main-menu li a:hover,
+ul.main-menu li a:focus {
+    color: cyan;
+}
+
+ul.main-menu .current_page_item > a {
+    color: cyan;
+    text-decoration: underline;
+    text-decoration-color: cyan;
+}
 
 
 /** HOMEPAGE **/
@@ -227,10 +289,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements or https://deve
     width: 100%;
 }
 
-ul.page-list{}
-
-ul.page-list li:first-child{}
-
 ul.page-list li > ul,
 ul.cat-list li > ul,
 .widget_archive ul {
@@ -274,10 +332,34 @@ ul.cat-list li > ul,
 
 @media screen and (min-width: 800px) {
     .sm-screens {
+        /** hides the toggle icon + sm logo **/
         display: none;
     }
     .logo {
         display: block;
+    }
+
+    /** bring back the menu - put it back to its default state **/
+    header nav {
+        /** reseting the positioning and the width **/
+        position: static;
+        width: auto; /** or initial **/
+        overflow: visible;
+        max-height: 20rem;
+    }
+
+    /** have the logo sit beside the menu */
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /** flexing the menu **/
+    ul.main-menu {
+        display: flex;
+        padding: 0;
+        gap: 2rem;
     }
 }
 
