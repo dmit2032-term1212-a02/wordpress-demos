@@ -87,7 +87,23 @@ function register_menus() {
    register_nav_menus(
       array(
          'main-menu' => 'Main Menu',
+         'footer-menu'  => 'Footer Menu'
       )
    );
 }
 add_action('init', 'register_menus');
+
+$wpdemos_includes = array(
+   '/widgets.php',   //register the widgets
+);
+
+foreach ( $wpdemos_includes as $file ) {
+   $filepath = locate_template ('inc' . $file );
+   if( ! $filepath ) {
+      trigger_error ( sprintf('Error locating /inc% for inclusion', $file), E_USER_ERROR );
+   }
+   require_once $filepath;
+}
+
+//option # 2 of including files 
+//require('inc/widgets.php')
