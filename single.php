@@ -12,7 +12,7 @@
       <?php _e('Blog'); ?>
     </h1>
     <div class="full-container">
-      <div class="container">
+      <div class="container two-thirds-layout">
         <!-- if there are posts then do something -->
         <?php  if( have_posts() ) : ?>
           <!-- while loop - is going to execute code as long as something is true. -->
@@ -25,6 +25,10 @@
           <?php else: ?>
             <?php get_template_part('template-parts/content', 'none'); ?>
         <?php endif; ?>
+        <!-- sidebar here -->
+          <div class="right-sidebar one-thrid-col">
+            <?php dynamic_sidebar('right-sidebar'); ?>
+          </div>
       </div>
     </div>
 
