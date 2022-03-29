@@ -85,6 +85,11 @@ a {
     align-items: flex-start;
     gap: 2.4rem;
 }
+.card-flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
 
 .sr-only {
     position: absolute;
