@@ -21,9 +21,9 @@
     <!-- set variable to name_field -->
     <?php $course_title = get_field('course_title'); ?>
     <h2>
-        <?php if($course_title) {
-            _e($course_title);
-        } ?>
+        <!-- <?php //if($course_title) {
+            //_e($course_title);
+        //} ?> -->
     </h2>    
 
 
@@ -61,6 +61,43 @@
             <!-- create the link structure with the above variables -->
             <a href="<?php print_r( esc_url( $course_btn_url) ); ?>"><?php print_r( esc_html( $course_btn_title ) ); ?></a>
     <?php endif; ?>
+
+    <!-- Use a custom loop to display blog excerpts on the homepage. -->
+    <?php 
+        $args =  array(
+            'post_type'         => 'post', //type of post (similar to CPT)
+            'posts_per_page'    => 2, //display # of posts
+            //'orderby'           => 'date', //show by date
+            //'order'             =>  'DESC' //show by last descendant
+        );
+        //varible ($blog_query) save as new WP_Query object
+        $blog_query = new WP_Query($args);
+    ?>
+
+    <?php if ( $blog_query->have_posts() ) : ?>
+        <?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
+            <!-- content here -->
+            <div class="home-blog-card">
+                <div class="home-blog-header">
+                    <!-- clickable featured image/thumbnail -->
+                    <a href="<?php the_permalink(); ?>">
+                        <?php echo get_the_post_thumbnail($post->ID, 'large'); ?>
+                    </a>
+                    <!-- clickable heading -->
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_title('<h4>', '</h4>'); ?>
+                    </a>
+                </div>
+                <div class="home-blog-body">
+                    <p><?php the_excerpt(); ?></p>
+                </div>
+                <a href="<?php the_permalink(); ?>"><?php _e('Read More >'); ?></a>
+            </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+        <!-- After looping through a seperate query, this function (wp_reset_postdata) restores the $post global to the current post in the main query. -->
+    <?php endif; ?>
+
 
 
 </article>

@@ -14,7 +14,15 @@
         <?php  if( have_posts() ) : ?>
           <!-- while loop - is going to execute code as long as something is true. -->
           <div class="banner">
-              <!-- page title -->
+             
+          <!-- adding in a image using ACF Fields -->
+              <?php 
+                  $css_icon = get_field('css_image');
+                  if( !empty($css_icon) ): ?>
+                  <!-- display our image -->
+                  <img src="<?php echo esc_url($css_icon['url'] ); ?>" alt="<?php echo esc_attr( $css_icon['alt'] ); ?>" />
+              <?php endif ?>
+               <!-- page title -->
               <?php the_title('<h1>', '</h1>'); ?>
           </div>
           <?php  while ( have_posts()) : the_post(); ?>
