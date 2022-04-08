@@ -58,6 +58,10 @@ a {
     padding: 0 2%;
 }
 
+section {
+    margin: 4.8rem 0;
+}
+
 /** note: this is fluid and not entirely responsive as of yet **/
 .two-thirds-layout {
     display: flex;
@@ -84,11 +88,6 @@ a {
     justify-content: space-between;
     align-items: flex-start;
     gap: 2.4rem;
-}
-.card-flex-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
 }
 
 .sr-only {
@@ -304,6 +303,72 @@ ul.cat-list li > ul,
 .remove-default-widget-heading .widget_archive h2 {
     display: none;
 }
+
+/** COURSES - PAGE TEMPLATE **/
+.flex-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.card {
+    width: 30%;
+}
+.card > header {
+    background-color: transparent;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: 2.1rem;
+    margin-bottom: 3rem;
+}
+/* highlights active page **/
+.pagination .current {
+    padding: 0 1rem;
+    background: teal;
+}
+
+.pagination a,
+.pagination span {
+    margin: 0.2rem 0.2rem 0;
+    padding: 0.5rem 1rem;
+    width: auto;
+    color: #fff;
+    background: #062d3c;
+}
+.pagination a:hover {
+    background: teal;
+}
+
+/** basic pagination **/
+.pagination.basic {
+    justify-content: space-between;
+}
+
+/** numerical pagination **/
+.numerical nav.pagination {
+    width: 100%;
+    background-color: transparent;
+}
+.numerical .nav-links {
+    display: flex;
+    width: 100%;
+}
+.numerical .nav-links a:nth-child(2),
+.numerical .nav-links a:last-child {
+    margin-left: auto;
+}
+
+/** post pagination **/
+.pagination.post {
+    justify-content: space-between;
+    margin-bottom: 3rem;
+} 
+
+
 
 @media screen and (min-width: 600px) {
     /** typography **/
