@@ -107,3 +107,39 @@ foreach ( $wpdemos_includes as $file ) {
 
 //option # 2 of including files 
 //require('inc/widgets.php')
+
+
+//PAGINATION
+//paged (page templates) pagination
+function page_pagination() {
+   global $wp_query; //access all of our posts and pages
+   $total_pages = $wp_query->max_num_pages;
+
+   if ($total_pages > 1) {
+      $current_page = max(1, get_query_var('paged'));
+
+      echo paginate_links( array(
+         'base'   => get_pagenum_link(1)  . '%_%', //initial page
+         'format' => '/page/%#%', //format of how pagination is displayed in the url
+         'current'   => $current_page,
+         'total'  => $total_pages,
+         'prev_text' => 'Prev',
+         'next_text' => 'Next'
+      ) );
+   }
+
+}
+
+//post pagination
+function post_pagination() {
+   global $wp_query;
+   ?>
+
+   <ul class="pagination" role="navigation">
+      <li class="prev-post-nav"> <?php previous_post_link('%link', 'Previous'); ?></li>
+      <li class="next-post-nav"><?php next_post_link('%link', 'Next') ?></li>
+   </ul>
+   <?php
+}
+
+
