@@ -50,8 +50,23 @@
                 <?php else: ?>
                     <?php get_template_part('template-parts/content', 'none'); ?>
             <?php endif; ?>
+                <!-- page pagination -->
+                <div class="pagination basic">
+                    <!-- basic page pagination -->
+                    <?php posts_nav_link(' '); ?>
+                </div>
+                <div class="pagination numerical">
+                    <!-- numerical pagination -->
+                    <?php the_posts_pagination(); ?>
+                </div>
+                <div class="pagination">
+                    <?php page_pagination() ?>    
+                    <!-- pagination function -->
+                    <!-- for older WP versions -->
+                    <?php //echo paginate_links(); ?>
+                </div>
+            </div>
         </div>
-    </div>
 
 
 <?php get_footer();?>
