@@ -7,7 +7,7 @@
  */
 ?>
 
-<article class="two-thirds-col" <?php post_class();?> id="post-<?php the_ID();?>" >
+<article class="" <?php post_class();?> id="post-<?php the_ID();?>" >
 
     <header>
         <!-- get page title -->
